@@ -1062,7 +1062,7 @@ h2 {
 
 .s10-descr {
   text-align: center;
-  font-size: 26px;
+  font-size: 22px;
   margin-top: 45px;
   font-weight: 800;
 }
@@ -1082,7 +1082,7 @@ h2 {
 
 .bg-blue {
   margin-top: 10px;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 800;
   display: inline-block;
   width: 100%;
@@ -1101,9 +1101,7 @@ h2 {
   margin-top: 30px;
 }
 
-.s5-top {
-  text-align: center;
-}
+
 
 .s13 {
   padding-top: 25px;
