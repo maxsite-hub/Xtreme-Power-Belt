@@ -1,0 +1,906 @@
+<!-- Подключеие к офферу -->
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=480" />
+    <title>Xtreme Power Belt</title>
+
+    <link rel="stylesheet" href="fonts/ProximaNova.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://promo2020.ru/static/js/lt_landing_valid_form.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://promo2020.ru/static/js/lt_landing_script.js"
+    ></script>
+    <script type="text/javascript">
+      $jsonData = {
+        RU: {
+          currency: " \u0440\u0443\u0431.",
+          productsum: 1990,
+          oldproductsum: 4400,
+          delivery: 0,
+          totalsum: "1990.00",
+        },
+      };
+    </script>
+
+    <style>
+      .ajax_loader {
+        display: none;
+      }
+    </style>
+
+    <!-- LT code insertion -->
+    <!-- /LT code insertion -->
+  </head>
+
+  <script>
+    $(document).ready(function () {
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, "0");
+      var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+      var yyyy = today.getFullYear();
+      today = dd + "." + mm + "." + yyyy;
+      today2 = dd - 1 + "." + mm + "." + yyyy;
+      today3 = dd - 2 + "." + mm + "." + yyyy;
+      today4 = dd - 4 + "." + mm + "." + yyyy;
+
+      $(".cur_date").html(today);
+      $(".cur_date2").html(today2);
+      $(".cur_date3").html(today3);
+      $(".cur_date4").html(today4);
+    });
+  </script>
+
+  <body>
+    <main>
+      <section class="s1">
+        <div class="s1-top">
+          <img src="img/s1-1.png" alt="" />
+          <p>
+            Гипоаллергенный <br />
+            материал
+          </p>
+          <img src="img/s1-2.png" alt="" />
+          <p>
+            100% гарантия <br />
+            качества
+          </p>
+          <img src="img/s1-3.png" alt="" />
+        </div>
+        <div class="s1-img">
+          <img src="img/s1-bg.jpg" alt="" />
+          <img class="s1-logo" src="img/s1-logo.png" alt="" />
+          <p class="s1-logo-text">Xtreme Power Belt</p>
+          <p class="s1-logo-text-2">
+            <span>два</span>
+            <br />
+            <span>цвета</span>
+            <br />
+            <span>на выбор:</span>
+          </p>
+          <img src="img/s1-4.png" alt="" class="s1-img4" />
+          <p class="s1-text">
+            Носите пояс каждый день <br />
+            <b
+              >и станьте стройнее <br />
+              <span class="unline-orange">на 3 размера!</span></b
+            >
+          </p>
+        </div>
+      </section>
+      <section class="s2">
+        <div class="container">
+          <div class="s2-list">
+            <div class="s2-list-item">
+              <img src="img/s2-1.png" alt="" />
+              <p>Создаст «эффект сауны» и уберёт лишние кг</p>
+            </div>
+            <div class="s2-list-item">
+              <img src="img/s2-2.png" alt="" />
+              <p>Сделает любую фигуру как «песочные часы»</p>
+            </div>
+            <div class="s2-list-item">
+              <img src="img/s2-3.png" alt="" />
+              <p>Подтянет живот и сформирует осанку</p>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <div class="form-title">
+              Закажите сегодня <br />
+              <b>и получите скидку 55%</b>
+            </div>
+            <div class="timer">
+              <div class="timer-title">До конца акции:</div>
+              <div class="timer-body">05ч : 29м : 13с</div>
+            </div>
+            <form
+              action="https://sweat-fit.promo2020.ru/success/"
+              method="post"
+              class="orderformcdn"
+            >
+              <div class="form-item">
+                <select name="country" class="countryselect form-control">
+                  <option selected value="RU">Россия</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control"
+                  placeholder="Ваше Имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control"
+                  placeholder="Ваш телефон"
+                  value=""
+                />
+              </div>
+              <div class="price">
+                <div class="price-old">
+                  <div>Цена со скидкой:</div>
+                  <div class="price-old-val productsum"></div>
+                </div>
+                <div class="price-new">
+                  Стандартная цена:
+                  <span class="price-new-val oldproductsum"></span>
+                </div>
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+              <div class="form-count">
+                Осталось
+                <span>5</span>
+                поясов по акции
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="s3">
+        <img src="gif/1-min.gif" alt="" style="width: 100%" />
+        <h2 class="unline">
+          <span class="pink"> Невероятный эффект </span>Xtreme Power Belt!
+        </h2>
+        <img src="img/s3-1.png" alt="" />
+        <div class="container">
+          <p class="s3-text center">
+            <b
+              >«Xtreme Power Belt» разработан специально для коррекции фигуры в
+              области живота.</b
+            >
+            <br />
+            Инновационная технология Bio-Thermal Lining ускоряет потоотделение и
+            сохраняет тепло тела для интенсивного разложения жировых клеток.
+          </p>
+        </div>
+        <img src="img/s3-2.png" alt="" />
+        <div class="container">
+          <div class="s3-list">
+            <div class="s3-item">
+              <img src="img/s3-mark.png" alt="" />
+              <p>Проблемные складки разглаживаются</p>
+            </div>
+            <div class="s3-item">
+              <img src="img/s3-mark.png" alt="" />
+              <p>Талия принимает правильную форму</p>
+            </div>
+            <div class="s3-item">
+              <img src="img/s3-mark.png" alt="" />
+              <p>Калории тратятся без вашего прямого участия</p>
+            </div>
+            <div class="s3-item">
+              <img src="img/s3-mark.png" alt="" />
+              <p>Живот подтягивается, мышцы пресса приходят в тонус</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s4">
+        <img src="gif/2-min.gif" alt="" style="width: 100%" />
+        <div class="container">
+          <h2 class="unline">
+            <span class="pink"> Ваш маленький секрет </span> идеальной фигуры!
+          </h2>
+          <img src="img/s4-img.png" alt="" />
+          <p class="s4-text">
+            <b
+              >Xtreme Power Belt сделан из инновационного тянущегося материала -
+              спандекса.</b
+            >
+            Впитывая всю лишнюю влагу, он даёт полный комфорт движений. Пояс
+            можно с комфортом носить целый день.
+          </p>
+          <div class="s4-list">
+            <div class="s4-item">
+              <img src="img/s4-1.png" alt="" />
+              <p>
+                Особая конструкция с металлическими вставками надежно фиксирует
+                пояс, защищая его от спадания и скручивания
+              </p>
+            </div>
+            <div class="s4-item">
+              <img src="img/s4-2.png" alt="" />
+              <p>
+                Плотный эластичный корсет формирует прямую осанку, делает спину
+                ровной и скрывает изъяны фигуры
+              </p>
+            </div>
+            <div class="s4-item">
+              <img src="img/s4-3.png" alt="" />
+              <p>
+                Ремни с липучками позволят быстро откорректировать размер пояса
+                для достижения наибольшего комфорта
+              </p>
+            </div>
+          </div>
+          <div class="s4-btn">
+            <a href="index.html#form" class="form-btn scroll-to " id="scroll-footer"
+              >Заказать сейчас</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="s5">
+        <img src="img/s5-img.jpg" alt="" />
+        <div class="container">
+          <h2 class="unline">
+            <span class="pink"> Почему миллионы женщин </span> <br />
+            выбрали пояс «Xtreme Power Belt»
+          </h2>
+          <div class="s5-top"><img src="img/s5-top.png" alt="" /></div>
+          <div class="s5-list">
+            <div class="s5-item">
+              <img src="img/s5-1.png" alt="" />
+              <div class="s5-item-text">
+                <div class="s5-item-title">Универсален</div>
+                <p>
+                  Ездите на работу с поясом, занимайтесь спортом, домашними
+                  делами - Xtreme Power Belt будет улучшать вашу фигуру
+                  ежедневно!
+                </p>
+              </div>
+            </div>
+            <div class="s5-item">
+              <img src="img/s5-2.png" alt="" />
+              <div class="s5-item-text">
+                <div class="s5-item-title">Приятен в носке</div>
+                <p>
+                  Несмотря на то, что пояс способен визуально уменьшить фигуру
+                  на 5-10 кг, он ничего не передавливает и не причиняет
+                  дискомфорт
+                </p>
+              </div>
+            </div>
+            <div class="s5-item">
+              <img src="img/s5-3.png" alt="" />
+              <div class="s5-item-text">
+                <div class="s5-item-title">Материал</div>
+                <p>
+                  Впитывающий материал пояса моментально поглощает лишнюю влагу
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s6">
+        <div class="container">
+          <h2 class="unline">
+            <span class="pink"> Для чего женщины используют </span> <br />
+            «Xtreme Power Belt»
+          </h2>
+
+          <img src="img/s6-1.jpg" alt="" />
+          <div class="s6-text">После беременности</div>
+          <ul class="s6-list true-list">
+            <li>Восстанавливает тонус ослабших мышц живота</li>
+            <li>
+              Сжигает большое количество калорий, которые сложно было бы
+              потратить в декрете
+            </li>
+            <li>Быстро убирает «лишнее» с живота и боков</li>
+          </ul>
+          <img src="img/s6-2.jpg" alt="" />
+          <div class="s6-text">При сидячей работе</div>
+          <ul class="s6-list true-list">
+            <li>Устраняет напряжение и усталость спины</li>
+            <li>Безопасное и комфортное использование целый день</li>
+          </ul>
+          <div class="img/s6-2.jpg">
+            <img src="img/s6-3.jpg" alt="" />
+            <div class="s6-text">При лишнем весе</div>
+          </div>
+          <ul class="s6-list true-list">
+            <li>Мгновенное уменьшение талии на два размера</li>
+            <li>Естественное формирование стройной талии за 4 недели</li>
+          </ul>
+        </div>
+        <div class="s6-img s6-img-false">
+          <img src="img/s6-4.png" alt="" />
+          <div class="s6-img-text">
+            Чем неудобно <br />
+            обычное утягивающее <br />
+            белье?
+          </div>
+        </div>
+        <ul class="s6-list true-list false-list">
+          <li>
+            Некачественный материал, создающий дискомфорт при ежедневной носке
+            белья
+          </li>
+          <li>Швы крупные, больно врезаются в кожу</li>
+          <li>Скрывает недостатки фигуры, но не борется с причинами</li>
+          <li>Не подходит для жаркой летней погоды</li>
+          <li>
+            Сложно угадать с размером, каждые сброшенные кг требуют покупки
+            размера меньше
+          </li>
+        </ul>
+      </section>
+      <section class="s7">
+        <div class="container">
+          <h2 class="unline unline-2">
+            <span class="orange">Xtreme Power Belt</span> <br />
+            даст результат сразу!
+          </h2>
+          <div class="s7-box">
+            <img src="gif/3-min.gif" alt="" style="width: 100%" />
+            <div class="s7-box-content">
+              <ul class="s7-list true-list">
+                <li>
+                  Технология двойного сжатия – плотно охватывает спину, пояс и
+                  живот.
+                </li>
+                <li>
+                  Толщина всего 25 мм. Его можно носить под любой одеждой.
+                </li>
+                <li>
+                  Степень сжатия регулируется, и Вы сами выбираете нужный
+                  эффект.
+                </li>
+                <li>
+                  Не сдавливает мышцы благодаря высокотехнологичному материалу.
+                </li>
+                <li>Сетчатый материал обеспечивает хорошую вентиляцию.</li>
+                <li>
+                  Бережно поддерживает мышцы спины, обеспечивая отличную осанку.
+                </li>
+              </ul>
+              <div class="s7-btn">
+                <a href="index.html#form" class="form-btn scroll-to"
+                  >Заказать сейчас</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s8">
+        <div class="container">
+          <h2 class="unline">Смотрите видео!</h2>
+          <div class="s8-video-wrapper">
+            <video class="youtube" width="100%" height="auto" controls>
+              <source src="video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+      <section class="s9">
+        <div class="container">
+          <h2>
+            <span class="pink">Пояс Xtreme Power Belt</span> <br />
+            уже зарекомендовал <br />
+            себя в 26 странах мира
+          </h2>
+          <h3 class="s5-item-title">Теперь он доступен и в России!</h3>
+          <img src="img/s9-1.png" alt="" class="s9-img" />
+          <div class="s9-sert-list">
+            <div class="s9-sert">
+              <img src="img/s9-sert1.jpg" alt="" />
+              <p>Сертификат соответствия</p>
+            </div>
+            <div class="s9-sert">
+              <img src="img/s9-sert2.jpg" alt="" />
+              <p>Гарантия качества</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s10">
+        <div class="container">
+          <h2 class="unline">
+            Товар по сниженной цене <span class="pink">лимитирован!</span>
+          </h2>
+          <div class="s10-info white-block">
+            <img src="img/s10-info.png" alt="" />
+            После публикации статьи <span class="cur_date"></span> в журнале
+            «Cosmopolitan»,
+            <span class="bg-orange-lt"
+              >наличие товара на складе сокращается!</span
+            >
+          </div>
+          <h3 class="s10-descr">
+            В связи с высоким спросом, <br />
+            вынуждены ввести ограничение:
+          </h3>
+          <h3 class="bg-blue">не более 3-х Xtreme Power Belt в 1 руки</h3>
+          <div class="form-wrapper">
+            <div class="form-title">
+              Закажите сегодня <br />
+              <b>и получите скидку 55%</b>
+            </div>
+            <div class="timer">
+              <div class="timer-title">До конца акции:</div>
+              <div class="timer-body">05ч : 29м : 13с</div>
+            </div>
+            <form
+              action="https://sweat-fit.promo2020.ru/success/"
+              method="post"
+              class="orderformcdn"
+            >
+              <div class="form-item">
+                <select name="country" class="countryselect form-control">
+                  <option selected value="RU">Россия</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control"
+                  placeholder="Ваше Имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control"
+                  placeholder="Ваш телефон"
+                  value=""
+                />
+              </div>
+              <div class="price">
+                <div class="price-old">
+                  <div>Цена со скидкой:</div>
+                  <div class="price-old-val productsum"></div>
+                </div>
+                <div class="price-new">
+                  Стандартная цена:
+                  <span class="price-new-val oldproductsum"></span>
+                </div>
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+              <div class="form-count">
+                Осталось
+                <span>5</span>
+                поясов по акции
+              </div>
+              <div class="form-limit">
+                *цена действует на распродажу лимитированной партии 500 шт.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="s11">
+        <div class="slider-wrapper">
+          <div class="slider">
+            <div class="slider-item">
+              <img src="img/s11-1.jpg" alt="" />
+            </div>
+            <div class="slider-item">
+              <img src="img/s11-2.jpg" alt="" />
+            </div>
+            <div class="slider-item">
+              <img src="img/s11-3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="slider-arrows"></div>
+        </div>
+      </section>
+      <section class="s12">
+        <div class="container">
+          <h2 class="unline">
+            <span class="pink">Реальные отзывы</span> <br />
+            наших покупателей
+          </h2>
+          <div class="s12-item white-block">
+            <img src="img/s12-1.jpg" alt="" class="s12-item-img" />
+            <div class="s12-item-top">
+              <div class="s12-name">Автор:</div>
+              <div class="s12-item-val">
+                Дарья Б. | <span class="cur_date2"></span>
+              </div>
+            </div>
+            <div class="s12-item-top">
+              <div class="s12-name">Оценка:</div>
+              <div class="s12-item-val">
+                <img src="img/s12-stars.png" alt="" />
+              </div>
+            </div>
+            <p>
+              Пояс просто находка. Надеваешь и фигура моментально преображается.
+              Ношу второй месяц и уже заметен результат. Талия стала уже, и
+              животик уменьшился. Посоветовала всем моим подругам, они тоже
+              оценили пояс. Утягивающий пояс Xtreme Power Belt верный путь к
+              идеальной талии!
+            </p>
+          </div>
+          <div class="s12-item white-block">
+            <img src="img/s12-2.jpg" alt="" class="s12-item-img" />
+            <div class="s12-item-top">
+              <div class="s12-name">Автор:</div>
+              <div class="s12-item-val">
+                Татьяна Ш. | <span class="cur_date3"></span>
+              </div>
+            </div>
+            <div class="s12-item-top">
+              <div class="s12-name">Оценка:</div>
+              <div class="s12-item-val">
+                <img src="img/s12-stars.png" alt="" />
+              </div>
+            </div>
+            <p>
+              Когда в 29 лет я родила второго ребенка, то уже не надеялась
+              вернуть свою прежнюю фигуру. Пару месяцев назад подруга из США
+              приехала и рассказала, что там все девушки ходят в таком поясе. Я
+              решила посмотреть и зашла на этот сайт. Тогда была огромная скидка
+              и я заказала такой пояс. Спустя всего пару дней пояс был у меня и,
+              что удобно, оплата была при получении. Меньше чем за месяц моя
+              фигура стала прежней! Всем рекомендую! 
+            </p>
+          </div>
+          <div class="s12-item white-block">
+            <img src="img/s12-3.jpg" alt="" class="s12-item-img" />
+            <div class="s12-item-top">
+              <div class="s12-name">Автор:</div>
+              <div class="s12-item-val">
+                Валерия Ф. | <span class="cur_date4"></span>
+              </div>
+            </div>
+            <div class="s12-item-top">
+              <div class="s12-name">Оценка:</div>
+              <div class="s12-item-val">
+                <img src="img/s12-stars.png" alt="" />
+              </div>
+            </div>
+            <p>
+                Я давно мечтала о тонкой
+                талии, как у девочек в Инстаграм. Думала откуда у них такие
+                фигуры? Сама не ела неделями, а теперь поняла что к чему)) Увидела
+                у одной из блогерш обзор на такой пояс и сразу решила заказать
+                себе тоже. Купила пояс Xtreme Power Belt, и теперь любимое занятие
+                делать селфи в платьях перед зеркалом и выкладывать в соцсети.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="s13 s5">
+        <div class="container">
+          <h2 class="unline">
+            <span class="pink"> Доставка и оплата </span> <br />
+            Xtreme Power Belt?
+          </h2>
+          <div class="s5-list">
+            <div class="s5-item">
+              <img src="img/s13-1.png" alt="" />
+              <div class="s5-item-text">
+                <div class="s5-item-title">Заявка</div>
+                <p>Оставьте заявку на нашем сайте, заполнив форму заказа</p>
+              </div>
+            </div>
+            <div class="s5-item">
+              <img src="img/s13-2.png" alt="" />
+              <div class="s5-item-text">
+                <div class="s5-item-title">Подтверждение</div>
+                <p>
+                  Наш менеджер перезвонит вам для уточнения деталей и мы
+                  отправим ваш товар по указанному адресу
+                </p>
+              </div>
+            </div>
+            <div class="s5-item">
+              <img src="img/s13-3.png" alt="" />
+              <div class="s5-item-text">
+                <div class="s5-item-title">Получение</div>
+                <p>
+                  Оплатите вашу посылку при получении на почте и наслаждайтесь
+                  результатом!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s14 s1">
+        <div class="s1-img">
+          <img src="img/s1-bg.jpg" alt="" />
+          <img class="s1-logo" src="img/s1-logo.png" alt="" />
+          <p class="s1-logo-text">Xtreme Power Belt</p>
+          <p class="s1-logo-text-2">
+            <span>два</span>
+            <br />
+            <span>цвета</span>
+            <br />
+            <span>на выбор:</span>
+          </p>
+          <img src="img/s1-4.png" alt="" class="s1-img4" />
+          <p class="s1-text">
+            Носите пояс каждый день <br />
+            <b
+              >и станьте стройнее <br />
+              <span class="unline-orange">на 3 размера!</span></b
+            >
+          </p>
+        </div>
+      </section>
+      <section class="s15 s2" id="form">
+        <div class="container">
+          <div class="s2-list">
+            <div class="s2-list-item">
+              <img src="img/s2-1.png" alt="" />
+              <p>Создаст «эффект сауны» и уберёт лишние кг</p>
+            </div>
+            <div class="s2-list-item">
+              <img src="img/s2-2.png" alt="" />
+              <p>Сделает любую фигуру как «песочные часы»</p>
+            </div>
+            <div class="s2-list-item">
+              <img src="img/s2-3.png" alt="" />
+              <p>Подтянет живот и сформирует осанку</p>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <div class="form-title">
+              Закажите сегодня <br />
+              <b>и получите скидку 55%</b>
+            </div>
+            <div class="timer">
+              <div class="timer-title">До конца акции:</div>
+              <div class="timer-body">05ч : 29м : 13с</div>
+            </div>
+            <form
+              action="https://sweat-fit.promo2020.ru/success/"
+              method="post"
+              class="orderformcdn"
+            >
+              <div class="form-item form-footer">
+                <select name="country" class="countryselect form-control">
+                  <option selected value="RU">Россия</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="name"
+                  class="field form-control"
+                  placeholder="Ваше Имя"
+                  value=""
+                />
+              </div>
+              <div class="form-item">
+                <input
+                  type="text"
+                  name="phone"
+                  class="field form-control"
+                  placeholder="Ваш телефон"
+                  value=""
+                />
+              </div>
+              <div class="price">
+                <div class="price-old">
+                  <div>Цена со скидкой:</div>
+                  <div class="price-old-val productsum"></div>
+                </div>
+                <div class="price-new">
+                  Стандартная цена:
+                  <span class="price-new-val oldproductsum"></span>
+                </div>
+              </div>
+              <input
+                type="hidden"
+                name="productsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="delivery" value="0 руб." />
+              <input
+                type="hidden"
+                name="totalsum"
+                class="productsum"
+                value="1 руб."
+              />
+              <input type="hidden" name="user" value="1" />
+              <input
+                type="hidden"
+                name="address"
+                value="Уточнить у покупателя"
+              />
+
+              <div class="reolader form-item">
+                <button
+                  type="submit"
+                  class="form-btn mm_button"
+                  onclick="checkFields(event, this);"
+                >
+                  Заказать сейчас
+                </button>
+                <div class="ajax_loader_block">
+                  <img
+                    class="ajax_loader"
+                    src="img/ajax-loader.gif"
+                    alt="Идет отправка данных"
+                  />
+                  <span class="ajax_loader">Идет отправка данных</span>
+                </div>
+              </div>
+              <div class="form-count">
+                Осталось
+                <span>5</span>
+                поясов по акции
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Контактная информация -->
+      <div class="" style="text-align: center; color: #222222; padding: 10px 0">
+        <p>
+          ООО "А-Торг" ИНН 7733871308 / ОГРН 1147746160132 г. Москва, Илимская
+          улица, дом 2, э 1 пом XIII к 1 оф 2
+        </p>
+        <br />
+        <a href="https://sweat-fit.promo2020.ru/politika.html" target="_blank"
+          >Политика&nbsp;конфиденциальности</a
+        >
+        <a href="https://sweat-fit.promo2020.ru/agreement.html" target="_blank"
+          >Пользовательское&nbsp;соглашение</a
+        >
+      </div>
+    </main>
+
+    <script src="js/slick.min.js"></script>
+    <script src="js/count.js"></script>
+    <script>
+      $(function () {
+        CountBox();
+        $(".slider-arrows").html("");
+
+        // $(".scroll-to").click(function () {
+        //   var scrollElem = $(this).attr("href");
+        //   scrollTo(scrollElem);
+        //   return false;
+        // });
+
+        $("#scroll-top").click(function (event) {
+          event.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: $(".form-top").offset().top,
+            },
+            4000
+          );
+        });
+
+        $(".slider").each(function () {
+          $(this)
+            .on("init", function (event, slick) {})
+            .slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              centerMode: true,
+              infinite: true,
+              variableWidth: true,
+              // adaptiveHeight: true,
+              arrows: true,
+              appendArrows: $(this).parent().find(".slider-arrows"),
+              prevArrow:
+                '<div class="arrow prev"><img src="img/prev.png" alt=""></div>',
+              nextArrow:
+                '<div class="arrow next"><img src="img/next.png" alt=""></div>',
+            })
+            .on("afterChange", function (event, slick, currentSlide) {
+              $(this).parent().find(".slider-num").removeClass("active");
+              $(this)
+                .parent()
+                .find(".slider-num.num-" + slick.currentSlide)
+                .addClass("active");
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

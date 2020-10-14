@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "ProximaNova";
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://sweat-fit.promo2020.ru/fonts/Proxima\ Nova\ Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://sweat-fit.promo2020.ru/fonts/Proxima\ Nova\ Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "ProximaNova";
+  font-display: auto;
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://sweat-fit.promo2020.ru/fonts/Proxima\ Nova\ Extrabold.otf") format("truetype");
+}

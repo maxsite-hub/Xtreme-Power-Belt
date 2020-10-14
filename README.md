@@ -1,2 +1,0 @@
-# Xtreme-Power-Belt
-root
